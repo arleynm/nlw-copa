@@ -17,12 +17,12 @@ async function bootstrap(){
         origin:true,
     })
 
-    fastify.get('/pools/count', async () => {
+    fastify.get('/users/count', async () => {
         const count = await prisma.user.count()
         return { count}
     });
 
-    fastify.get('/users/count', async () => {
+    fastify.get('/pools/count', async () => {
         const count = await prisma.pool.count()
         return { count}
     });
